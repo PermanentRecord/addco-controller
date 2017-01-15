@@ -6,10 +6,11 @@ const wlc = new WarningLightsController()
 
 wlc.authenticate(process.env.USERNAME, process.env.PASSWORD)
   .then(() => {
+    console.log('auth')
     // Request the information for a given area.
     wlc.getArea()
       .then((d) => {
-        console.log('d', d)
+        console.log('area', d)
       })
       .catch((e) => {
         console.log(e)
