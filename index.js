@@ -4,8 +4,7 @@
 const AddcoController = require('./lib/addco-controller')
 const acc = new AddcoController()
 
-let area
-let board
+let area // The data for the geographic area we're working with.
 
 acc.authenticate(process.env.USERNAME, process.env.PASSWORD)
   .then(() => {
@@ -20,13 +19,7 @@ acc.authenticate(process.env.USERNAME, process.env.PASSWORD)
         let divisionId = boardIdComponents[2]
         let cmsId = boardIdComponents[1]
 
-        acc.getMessageList(divisionId, cmsId)
-          .then((data) => {
-
-          })
-          .catch((e) => {
-
-          })
+        // Now, either add a message or get a message list.
       })
       .catch((e) => {
         console.log(e)
