@@ -1,5 +1,4 @@
 
-
 // Consumes a stream & updates ADDCO traffic signs.
 
 const WarningLightsController = require('./lib/warning-lights')
